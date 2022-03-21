@@ -32,19 +32,12 @@ namespace TestProject1
         [TestCase(-23.2)]
         public void Calculate_Ñircle_Area_With_Incorrect_Radius_Test(double radius)
         {
-            // Arrange
-            try
+            // Arrange, Act, Assert
+            Assert.Throws<ArgumentException>(() => 
             {
-                IShape shape = new Circle(radius);
-            }
-            // Assert
-            catch (Exception ex)
-            {
-                Assert.IsTrue(ex is ArgumentException);
-            }
-
-            // Act, Assert
-            Assert.Throws<ArgumentException>(() => FigureAreaCalculator.CalculateArea(new Circle(radius)));
+                var circle = new Circle(radius);
+                FigureAreaCalculator.CalculateArea(circle);
+            });
         }
 
         [Test]

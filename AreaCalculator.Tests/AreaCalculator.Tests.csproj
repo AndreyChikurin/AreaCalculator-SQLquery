@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\InterviewLib1\AreaCalculator.csproj" />
+    <ProjectReference Include="..\AreaCalculator\AreaCalculator.csproj" />
   </ItemGroup>
 
 </Project>
