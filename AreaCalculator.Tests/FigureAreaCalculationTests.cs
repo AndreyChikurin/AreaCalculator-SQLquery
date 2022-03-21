@@ -52,7 +52,7 @@ namespace TestProject1
             double result = FigureAreaCalculator.CalculateArea(shape);
 
             // Assert
-            Assert.AreEqual(result, expectedResult);
+            Assert.IsTrue(Math.Abs(result - expectedResult) < precisely);
         }
 
 
