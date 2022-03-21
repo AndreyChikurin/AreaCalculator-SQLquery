@@ -1,3 +1,3 @@
-- InterviewLib1 - class library for the figures area calculating 
-- TestProject1 - area calculating unit tests
+- AreaCalculator - class library for the figures area calculating 
+- AreaCalculator.Tests - area calculating unit tests
 - SQLQuery1.sql is a query that outputs pairs of product name category name
