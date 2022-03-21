@@ -18,10 +18,10 @@ namespace AreaCalculator
 
         public double CalculateArea()
         {
-            return InternalCalculateSquare();
+            return InternalCalculateArea();
         }
 
-        protected virtual double InternalCalculateSquare()
+        protected virtual double InternalCalculateArea()
         {
             return Math.Pow(_radius, 2) * Constants.PI;
         }

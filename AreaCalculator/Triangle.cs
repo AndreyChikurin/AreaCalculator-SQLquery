@@ -25,12 +25,12 @@ namespace AreaCalculator
 
         public double CalculateArea()
         {
-            return InternalCalculateSquare();
+            return InternalCalculateArea();
         }
 
-        protected virtual double InternalCalculateSquare()
+        protected virtual double InternalCalculateArea()
         {
-            // Общая формула расчета площади любого корректного треугольника
+            // The general formula for calculating the area of any correct triangle
             if (!_isRectangular)
             {
                 double halfPerimetr = (_x + _y + _z) / 2;
@@ -38,7 +38,7 @@ namespace AreaCalculator
                 return Math.Sqrt(halfPerimetr * (halfPerimetr - _x) * (halfPerimetr - _y) * (halfPerimetr - _z));
             }
 
-            // Формулы расчета для прямогульного трегольника
+            // Calculation formulas for a rectangular triangle
             if (_x > _y && _x > _z)
             {
                 return (_y * _z) / 2;
@@ -52,7 +52,7 @@ namespace AreaCalculator
             return (_x * _y) / 2;
         }
 
-        //Проверка, является ли треугольник прямоугольным через формулу Пифагора
+        // Checking whether a triangle is rectangular via the Pythagorean formula
         private bool CheckIfRectangular()
         {
             const double precisely = 0.0000001;
