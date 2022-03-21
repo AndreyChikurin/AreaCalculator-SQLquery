@@ -63,19 +63,12 @@ namespace TestProject1
         [TestCase(0, -2, 0)]
         public void Calculate_Triangle_Area_With_Incorrect_Sides_Test(double x, double y, double z)
         {
-            // Arrange
-            try
+            // Arrange, Act, Assert
+            Assert.Throws<ArgumentException>(() =>
             {
-                IShape shape = new Triangle(x, y, z);
-            }
-            // Assert
-            catch (Exception ex)
-            {
-                Assert.IsTrue(ex is ArgumentException);
-            }
-
-            // Act, Assert
-            Assert.Throws<ArgumentException>(() => FigureAreaCalculator.CalculateArea(new Triangle(x, y, z)));
+                var triangle = new Triangle(x, y, z);
+                FigureAreaCalculator.CalculateArea(triangle);
+            });
         }
     }
 }
